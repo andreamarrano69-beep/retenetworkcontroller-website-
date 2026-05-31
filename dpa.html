@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DPA — Rete Network Controller</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d0d1a; --bg2: #0a0a1e; --bg3: #060612;
+      --blue: #4DA6FF; --green: #00CC66;
+      --text: #cccccc; --text2: #888888; --border: #1a1a3a;
+    }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { color: #7dc4ff; }
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,13,26,0.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 60px;
+    }
+    .nav-logo { font-size: 1rem; font-weight: 700; color: var(--blue); }
+    .nav-back { font-size: 0.85rem; color: var(--text2); }
+    .nav-back:hover { color: var(--blue); }
+    main { max-width: 800px; margin: 0 auto; padding: 60px 24px 80px; }
+    .doc-header { margin-bottom: 48px; border-bottom: 1px solid var(--border); padding-bottom: 32px; }
+    .doc-header .tag { font-size: 0.72rem; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+    .doc-header h1 { font-size: 2rem; color: #fff; margin-bottom: 10px; }
+    .doc-header p { color: var(--text2); font-size: 0.9rem; }
+    .alert-green {
+      background: rgba(0,204,102,0.08); border: 1px solid rgba(0,204,102,0.25);
+      border-radius: 10px; padding: 18px 22px; margin-bottom: 36px;
+    }
+    .alert-green strong { color: var(--green); display: block; margin-bottom: 6px; }
+    .alert-green p { font-size: 0.88rem; }
+    h2 { font-size: 1.15rem; color: var(--blue); margin: 36px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    p { margin-bottom: 10px; font-size: 0.92rem; }
+    ol { margin: 8px 0 16px 22px; }
+    ol li { font-size: 0.9rem; color: var(--text2); margin-bottom: 6px; }
+    ol li strong { color: var(--text); }
+    ul { margin: 8px 0 16px 20px; }
+    ul li { font-size: 0.9rem; color: var(--text2); margin-bottom: 5px; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 0.85rem; }
+    th { background: var(--bg3); color: var(--blue); text-align: left; padding: 10px 12px; border: 1px solid var(--border); }
+    td { padding: 10px 12px; border: 1px solid var(--border); color: var(--text2); vertical-align: top; }
+    tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+    .cta-box {
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: 12px; padding: 28px; margin-top: 40px; text-align: center;
+    }
+    .cta-box h3 { color: #fff; margin-bottom: 8px; }
+    .cta-box p { font-size: 0.88rem; color: var(--text2); margin-bottom: 18px; }
+    .btn { display: inline-block; background: var(--blue); color: #000; font-weight: 700; padding: 12px 28px; border-radius: 8px; font-size: 0.9rem; }
+    .btn:hover { color: #000; opacity: 0.9; }
+    footer { text-align: center; padding: 32px; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text2); }
+    @media (max-width: 600px) { nav { padding: 0 16px; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">🛡️ Rete Network Controller</div>
+  <a href="index.html" class="nav-back">← Torna al sito</a>
+</nav>
+
+<main>
+  <div class="doc-header">
+    <p class="tag">Documento Legale</p>
+    <h1>Data Processing Agreement (DPA)</h1>
+    <p>Accordo sul Trattamento dei Dati ai sensi dell'art. 28 GDPR — Versione 1.0 — Maggio 2026</p>
+    <p style="margin-top:8px;">
+      <strong style="color:#fff;">Fornitore:</strong> Andrea Marrano — Cybersecurity Consulting<br>
+      P.IVA: 04361120613 &nbsp;·&nbsp; Email: <a href="mailto:andrea.marrano69@gmail.com">andrea.marrano69@gmail.com</a>
+    </p>
+  </div>
+
+  <div class="alert-green">
+    <strong>📌 Nota tecnica importante</strong>
+    <p>Rete Network Controller elabora i dati <strong>esclusivamente in locale</strong> sul PC del Cliente. Andrea Marrano non riceve, non archivia e non ha accesso ai dati di scansione del Cliente. Pertanto, tecnicamente, Andrea Marrano <strong>non è un Responsabile del Trattamento</strong> ai sensi dell'art. 28 GDPR per il trattamento dei Dati di Rete.<br><br>
+    Questo DPA è necessario solo per regolare: i servizi cloud opzionali (HIBP, Claude AI), eventuali servizi di assistenza remota e la fornitura di consulenza che implica accesso a dati.</p>
+  </div>
+
+  <h2>Art. 1 — Oggetto e Scopo</h2>
+  <ol>
+    <li>Il presente Accordo disciplina il trattamento dei dati personali nell'ambito della fornitura del Software "Rete Network Controller" e dei servizi accessori concordati.</li>
+    <li>Il Cliente agisce in qualità di <strong>Titolare del Trattamento</strong> (art. 4 n.7 GDPR). Il Licenziante agisce come Responsabile del Trattamento (art. 4 n.8 GDPR) limitatamente ai casi in cui accede ai sistemi del Cliente per attività di assistenza tecnica, consulenza o accesso ai log.</li>
+  </ol>
+
+  <h2>Art. 2 — Natura e Finalità del Trattamento</h2>
+  <ol>
+    <li>Il Responsabile tratta i dati personali per conto del Titolare esclusivamente per:
+      <ul style="margin-top:8px;">
+        <li>Erogazione del supporto tecnico relativo al Software</li>
+        <li>Assistenza remota (solo se espressamente richiesta dal Cliente)</li>
+        <li>Analisi di log per diagnosi di problemi tecnici</li>
+        <li>Aggiornamento e manutenzione del Software</li>
+      </ul>
+    </li>
+    <li>Categorie di dati che possono essere trattati nell'ambito del supporto:
+      <ul style="margin-top:8px;">
+        <li>Log applicativi (eventi, errori, azioni utente anonimizzate)</li>
+        <li>Screenshot o registrazioni schermo forniti volontariamente dal Cliente</li>
+        <li>Configurazioni del Software (no dati di scansione, no dati di rete)</li>
+      </ul>
+    </li>
+    <li>Il Responsabile <strong>non accede ai Dati di Rete</strong> (IP, MAC, hostname, scan) del Cliente, i quali restano esclusivamente nel database locale del Cliente.</li>
+  </ol>
+
+  <h2>Art. 3 — Sub-Responsabili del Trattamento</h2>
+  <p>Il Software utilizza i seguenti sub-responsabili per funzioni opzionali. Il Cliente accetta il loro utilizzo attivando le rispettive funzioni:</p>
+  <table>
+    <tr><th>Sub-Responsabile</th><th>Paese</th><th>Funzione</th><th>Privacy</th></tr>
+    <tr>
+      <td><strong>Have I Been Pwned</strong></td>
+      <td>UK</td>
+      <td>HIBP password/email check</td>
+      <td><a href="https://haveibeenpwned.com/Privacy" target="_blank">Link</a></td>
+    </tr>
+    <tr>
+      <td><strong>Anthropic Inc.</strong></td>
+      <td>USA (SCC)</td>
+      <td>AI Assistant Claude</td>
+      <td><a href="https://www.anthropic.com/privacy" target="_blank">Link</a></td>
+    </tr>
+    <tr>
+      <td><strong>ip-api.com</strong></td>
+      <td>UE</td>
+      <td>Geolocalizzazione IP pubblico</td>
+      <td><a href="https://ip-api.com/docs/legal" target="_blank">Link</a></td>
+    </tr>
+  </table>
+  <p>Il Cliente può disabilitare l'utilizzo di questi servizi nelle Impostazioni del Software, senza impatto sulle funzioni di scansione locale.</p>
+
+  <h2>Art. 4 — Obblighi del Responsabile del Trattamento</h2>
+  <p>Il Licenziante si impegna a:</p>
+  <ol>
+    <li>Trattare i dati personali solo su istruzione documentata del Titolare, salvo obbligo di legge contrario.</li>
+    <li>Garantire che le persone autorizzate al trattamento si siano impegnate alla riservatezza.</li>
+    <li>Adottare tutte le misure tecniche e organizzative appropriate ai sensi dell'art. 32 GDPR (HTTPS/TLS, accesso solo previa autorizzazione, cancellazione dati al termine del supporto).</li>
+    <li>Non coinvolgere ulteriori Sub-Responsabili senza previa autorizzazione scritta del Titolare.</li>
+    <li>Assistere il Titolare nel rispondere alle richieste di esercizio dei diritti degli interessati.</li>
+    <li>Notificare al Titolare qualsiasi violazione dei dati entro <strong>24 ore</strong> dalla conoscenza dell'evento.</li>
+    <li>Cancellare o restituire tutti i dati personali al Titolare al termine del contratto entro 30 giorni.</li>
+  </ol>
+
+  <h2>Art. 5 — Obblighi del Titolare del Trattamento</h2>
+  <p>Il Cliente si impegna a:</p>
+  <ol>
+    <li>Fornire istruzioni documentate e lecite per il trattamento dei dati.</li>
+    <li>Assicurarsi di disporre di una base giuridica valida per il trattamento dei dati di rete.</li>
+    <li>Informare adeguatamente i dipendenti i cui dati vengono trattati tramite il Software.</li>
+    <li>Non utilizzare il Software per scansionare reti di terzi senza autorizzazione scritta.</li>
+    <li>Garantire la sicurezza fisica e logica del PC su cui è installato il Software.</li>
+  </ol>
+
+  <h2>Art. 6 — Durata e Cessazione</h2>
+  <ol>
+    <li>Il presente DPA ha durata pari a quella del contratto di licenza EULA.</li>
+    <li>In caso di cessazione, il Responsabile cancella tutti i dati del Cliente entro 30 giorni.</li>
+    <li>La certificazione della cancellazione viene fornita su richiesta.</li>
+  </ol>
+
+  <h2>Art. 7 — Legge Applicabile</h2>
+  <p>Il presente DPA è regolato dal Regolamento UE 2016/679 (GDPR), dal D.Lgs. 196/2003 come modificato dal D.Lgs. 101/2018 e dalla legge italiana.</p>
+
+  <div class="cta-box">
+    <h3>Hai bisogno di firmare il DPA?</h3>
+    <p>Il DPA viene fornito in formato PDF firmabile su richiesta, insieme all'acquisto di una licenza Professional o Enterprise. Contattaci per ricevere il documento completo.</p>
+    <a href="mailto:andrea.marrano69@gmail.com?subject=Richiesta%20DPA%20—%20Rete%20Network%20Controller" class="btn">Richiedi il DPA firmato</a>
+  </div>
+
+  <p style="margin-top:32px; padding:16px; background:var(--bg3); border-radius:8px; font-size:0.82rem; color:var(--text2);">
+    <strong style="color:#fff;">Nota:</strong> Il presente documento è un template redatto a scopo orientativo. Si raccomanda la revisione da parte di un avvocato specializzato in GDPR o di un Data Protection Officer certificato prima di qualsiasi utilizzo commerciale.
+  </p>
+</main>
+
+<footer>
+  © 2025–2026 Andrea Marrano — Cybersecurity Consulting · P.IVA 04361120613 ·
+  <a href="index.html">Home</a> · <a href="privacy.html">Privacy Policy</a> · <a href="eula.html">EULA</a>
+</footer>
+
+</body>
+</html>

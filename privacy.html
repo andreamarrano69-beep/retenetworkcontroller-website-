@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Rete Network Controller</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d0d1a; --bg2: #0a0a1e; --bg3: #060612;
+      --blue: #4DA6FF; --green: #00CC66;
+      --text: #cccccc; --text2: #888888; --border: #1a1a3a;
+    }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { color: #7dc4ff; }
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,13,26,0.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 60px;
+    }
+    .nav-logo { font-size: 1rem; font-weight: 700; color: var(--blue); }
+    .nav-back { font-size: 0.85rem; color: var(--text2); }
+    .nav-back:hover { color: var(--blue); }
+    main { max-width: 800px; margin: 0 auto; padding: 60px 24px 80px; }
+    .doc-header { margin-bottom: 48px; border-bottom: 1px solid var(--border); padding-bottom: 32px; }
+    .doc-header .tag { font-size: 0.72rem; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+    .doc-header h1 { font-size: 2rem; color: #fff; margin-bottom: 10px; }
+    .doc-header p { color: var(--text2); font-size: 0.9rem; }
+    .alert {
+      background: rgba(77,166,255,0.08); border: 1px solid rgba(77,166,255,0.25);
+      border-radius: 10px; padding: 20px 24px; margin-bottom: 40px;
+    }
+    .alert strong { color: var(--blue); display: block; margin-bottom: 6px; }
+    .alert p { font-size: 0.9rem; color: var(--text); }
+    h2 { font-size: 1.2rem; color: #fff; margin: 40px 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    h3 { font-size: 1rem; color: var(--blue); margin: 20px 0 8px; }
+    p { margin-bottom: 12px; font-size: 0.92rem; color: var(--text); }
+    ul { margin: 8px 0 16px 20px; }
+    ul li { font-size: 0.9rem; color: var(--text2); margin-bottom: 5px; }
+    ul li strong { color: var(--text); }
+    .highlight { color: var(--green); font-weight: 600; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 0.85rem; }
+    th { background: var(--bg3); color: var(--blue); text-align: left; padding: 10px 12px; border: 1px solid var(--border); }
+    td { padding: 10px 12px; border: 1px solid var(--border); color: var(--text2); vertical-align: top; }
+    tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+    .rights-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+    .right-item { background: var(--bg3); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
+    .right-item .art { font-size: 0.72rem; color: var(--blue); font-weight: 700; margin-bottom: 4px; }
+    .right-item h4 { font-size: 0.88rem; color: #fff; margin-bottom: 4px; }
+    .right-item p { font-size: 0.8rem; color: var(--text2); margin: 0; }
+    footer { text-align: center; padding: 32px; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text2); }
+    @media (max-width: 600px) { nav { padding: 0 16px; } .rights-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">🛡️ Rete Network Controller</div>
+  <a href="index.html" class="nav-back">← Torna al sito</a>
+</nav>
+
+<main>
+  <div class="doc-header">
+    <p class="tag">Documento Legale</p>
+    <h1>Informativa sulla Privacy</h1>
+    <p>ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR) &nbsp;·&nbsp; Versione 1.0 — Maggio 2026</p>
+    <p style="margin-top:8px;">
+      <strong style="color:#fff;">Titolare del Trattamento:</strong> Andrea Marrano — Cybersecurity Consulting<br>
+      P.IVA: 04361120613 &nbsp;·&nbsp; Email: <a href="mailto:andrea.marrano69@gmail.com">andrea.marrano69@gmail.com</a>
+    </p>
+  </div>
+
+  <div class="alert">
+    <strong>📌 Punto chiave</strong>
+    <p>Il Software è progettato per operare <strong>interamente in locale</strong> sul PC dell'utente. I dati di scansione (IP, MAC, hostname, porte) <strong>non vengono mai trasmessi</strong> ai nostri server. L'utente che usa il Software sulla propria rete è lui stesso Titolare del Trattamento ai sensi del GDPR.</p>
+  </div>
+
+  <h2>1. Categorie di dati trattati</h2>
+
+  <h3>A) Dati di rete — archiviati solo sul PC dell'utente</h3>
+  <ul>
+    <li>Indirizzi IP dei dispositivi sulla rete locale</li>
+    <li>Indirizzi MAC (Media Access Control)</li>
+    <li>Hostname e nomi NetBIOS dei dispositivi</li>
+    <li>Porte TCP/UDP aperte e servizi in ascolto</li>
+    <li>Dati ARP (tabella di risoluzione IP-MAC)</li>
+    <li>Risultati di audit di sicurezza (NIS2, Active Directory)</li>
+    <li>Certificati SSL/TLS e relative scadenze</li>
+  </ul>
+
+  <h3>B) Dati dell'utente applicativo — archiviati solo sul PC dell'utente</h3>
+  <ul>
+    <li>Username e hash della password (PBKDF2-HMAC-SHA256, 260.000 iterazioni)</li>
+    <li>Log delle operazioni eseguite (audit trail interno)</li>
+    <li>Configurazioni dell'applicazione</li>
+  </ul>
+
+  <h3>C) Dati trasmessi a servizi terzi (solo se le funzioni vengono attivate)</h3>
+  <table>
+    <tr><th>Servizio</th><th>Dati trasmessi</th><th>Base giuridica</th></tr>
+    <tr>
+      <td><strong>Have I Been Pwned</strong> (UK)<br><a href="https://haveibeenpwned.com/Privacy" target="_blank">Privacy Policy HIBP</a></td>
+      <td>Primi 5 caratteri hash SHA-1 della password (k-anonymity). Per email: indirizzo tramite API con Privacy mode. La password completa non viene mai trasmessa.</td>
+      <td>Consenso (art. 6.1.a GDPR)</td>
+    </tr>
+    <tr>
+      <td><strong>Anthropic Inc.</strong> (USA)<br><a href="https://www.anthropic.com/privacy" target="_blank">Privacy Policy Anthropic</a></td>
+      <td>Testo inserito dall'utente e summary di scansione. Trasferimento extra-UE con Standard Contractual Clauses (SCC).</td>
+      <td>Consenso (art. 6.1.a GDPR)</td>
+    </tr>
+    <tr>
+      <td><strong>ip-api.com</strong> (UE)</td>
+      <td>Indirizzo IP pubblico per geolocalizzazione.</td>
+      <td>Legittimo interesse (art. 6.1.f GDPR)</td>
+    </tr>
+  </table>
+
+  <h3>D) Dati di aggiornamento</h3>
+  <p>Al controllo aggiornamenti viene inviato l'header User-Agent con la versione del Software. Nessun dato identificativo viene trasmesso.</p>
+
+  <h2>2. Finalità e base giuridica</h2>
+  <ul>
+    <li><strong>Erogazione del servizio</strong> (art. 6.1.b — esecuzione del contratto): scansioni, report, gestione utenti, audit di sicurezza.</li>
+    <li><strong>Sicurezza informatica</strong> (art. 6.1.f — legittimo interesse): identificazione vulnerabilità nell'infrastruttura dell'utente.</li>
+    <li><strong>Servizi opzionali HIBP e AI</strong> (art. 6.1.a — consenso): disabilitabili in qualsiasi momento dalle Impostazioni.</li>
+  </ul>
+
+  <h2>3. Conservazione dei dati</h2>
+  <ul>
+    <li>I Dati di Rete sono conservati nel database locale (<code>scanner_data.db</code>) fino alla disinstallazione o cancellazione manuale.</li>
+    <li>L'utente può attivare la cancellazione automatica all'uscita (opzione "Wipe on Exit").</li>
+    <li>Il Titolare (Andrea Marrano) <span class="highlight">non conserva</span> dati di scansione dell'utente.</li>
+    <li>Per i log di audit si raccomanda una retention policy di 12 mesi.</li>
+  </ul>
+
+  <h2>4. Misure di sicurezza tecniche</h2>
+  <ul>
+    <li>Password hashing: PBKDF2-HMAC-SHA256 con 260.000 iterazioni e salt random</li>
+    <li>Cifratura dati sensibili: AES-128-CBC (Fernet) per password SMTP e API key</li>
+    <li>Protezione brute force: blocco account dopo 5 tentativi (60 secondi)</li>
+    <li>Modalità USB Zero-trace: nessun dato scritto sul PC ospite</li>
+    <li>Comunicazioni esterne: esclusivamente via HTTPS con verifica certificato</li>
+  </ul>
+
+  <h2>5. Diritti degli interessati (artt. 15–22 GDPR)</h2>
+  <div class="rights-grid">
+    <div class="right-item"><div class="art">Art. 15</div><h4>Accesso</h4><p>Ottenere conferma e copia dei dati trattati</p></div>
+    <div class="right-item"><div class="art">Art. 16</div><h4>Rettifica</h4><p>Correggere dati inesatti o incompleti</p></div>
+    <div class="right-item"><div class="art">Art. 17</div><h4>Cancellazione</h4><p>Richiedere la cancellazione dei propri dati</p></div>
+    <div class="right-item"><div class="art">Art. 18</div><h4>Limitazione</h4><p>Limitare il trattamento in determinati casi</p></div>
+    <div class="right-item"><div class="art">Art. 20</div><h4>Portabilità</h4><p>Ricevere i dati in formato strutturato</p></div>
+    <div class="right-item"><div class="art">Art. 21</div><h4>Opposizione</h4><p>Opporsi al trattamento per legittimo interesse</p></div>
+  </div>
+  <p>Per esercitare i diritti: <a href="mailto:andrea.marrano69@gmail.com">andrea.marrano69@gmail.com</a> — risposta entro 30 giorni.<br>
+  In caso di risposta insoddisfacente: <a href="https://www.garanteprivacy.it" target="_blank">www.garanteprivacy.it</a></p>
+
+  <h2>6. Responsabilità dell'utente come Titolare del Trattamento</h2>
+  <p>L'utente che utilizza il Software in ambito professionale o aziendale è Titolare del Trattamento dei Dati di Rete raccolti. È tenuto a:</p>
+  <ul>
+    <li>Informare dipendenti e collaboratori della presenza del Software e delle scansioni</li>
+    <li>Assicurarsi di avere una base giuridica valida (art. 6 GDPR) per scansionare la rete</li>
+    <li>Non utilizzare il Software per scansionare reti di terzi senza autorizzazione scritta</li>
+    <li>Garantire la sicurezza fisica e logica del PC e del database locale</li>
+  </ul>
+
+  <h2>7. Modifiche all'informativa</h2>
+  <p>La presente Informativa può essere aggiornata. In caso di modifiche sostanziali, l'utente sarà notificato tramite il sistema di aggiornamento del Software. La versione aggiornata è sempre disponibile su questo sito.</p>
+
+  <p style="margin-top:40px; padding:16px; background:var(--bg3); border-radius:8px; font-size:0.82rem; color:var(--text2);">
+    <strong style="color:#fff;">Nota:</strong> Il presente documento è stato redatto a scopo orientativo. Si raccomanda la revisione da parte di un Data Protection Officer (DPO) o consulente legale specializzato in privacy prima dell'uso commerciale.
+  </p>
+</main>
+
+<footer>
+  © 2025–2026 Andrea Marrano — Cybersecurity Consulting · P.IVA 04361120613 ·
+  <a href="index.html">Home</a> · <a href="eula.html">EULA</a> · <a href="dpa.html">DPA</a>
+</footer>
+
+</body>
+</html>

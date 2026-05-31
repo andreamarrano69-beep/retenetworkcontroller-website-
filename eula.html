@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EULA — Rete Network Controller</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d0d1a; --bg2: #0a0a1e; --bg3: #060612;
+      --blue: #4DA6FF; --orange: #FF8C00; --green: #00CC66;
+      --text: #cccccc; --text2: #888888; --border: #1a1a3a;
+    }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { color: #7dc4ff; }
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,13,26,0.95); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 60px;
+    }
+    .nav-logo { font-size: 1rem; font-weight: 700; color: var(--blue); }
+    .nav-back { font-size: 0.85rem; color: var(--text2); }
+    .nav-back:hover { color: var(--blue); }
+    main { max-width: 800px; margin: 0 auto; padding: 60px 24px 80px; }
+    .doc-header { margin-bottom: 48px; border-bottom: 1px solid var(--border); padding-bottom: 32px; }
+    .doc-header .tag { font-size: 0.72rem; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+    .doc-header h1 { font-size: 2rem; color: #fff; margin-bottom: 10px; }
+    .doc-header p { color: var(--text2); font-size: 0.9rem; }
+    .alert-warning {
+      background: rgba(255,140,0,0.08); border: 1px solid rgba(255,140,0,0.3);
+      border-radius: 10px; padding: 18px 22px; margin-bottom: 36px;
+    }
+    .alert-warning p { font-size: 0.88rem; color: var(--text); }
+    .alert-warning strong { color: var(--orange); }
+    h2 { font-size: 1.15rem; color: var(--blue); margin: 36px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    p { margin-bottom: 10px; font-size: 0.92rem; }
+    ol { margin: 8px 0 16px 22px; }
+    ol li { font-size: 0.9rem; color: var(--text2); margin-bottom: 6px; }
+    ol li strong { color: var(--text); }
+    .restriction-list { list-style: none; margin: 0 0 16px; padding: 0; }
+    .restriction-list li {
+      padding: 8px 12px 8px 32px; font-size: 0.88rem; color: var(--text2);
+      border-bottom: 1px solid var(--border); position: relative;
+    }
+    .restriction-list li::before { content: '✗'; color: #FF3333; position: absolute; left: 10px; }
+    .caps { font-size: 0.85rem; color: var(--text2); font-style: italic; background: var(--bg3); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin: 12px 0; }
+    footer { text-align: center; padding: 32px; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text2); }
+    @media (max-width: 600px) { nav { padding: 0 16px; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">🛡️ Rete Network Controller</div>
+  <a href="index.html" class="nav-back">← Torna al sito</a>
+</nav>
+
+<main>
+  <div class="doc-header">
+    <p class="tag">Documento Legale</p>
+    <h1>Contratto di Licenza (EULA)</h1>
+    <p>End User License Agreement — Versione 1.0 — Maggio 2026</p>
+    <p style="margin-top:8px;">
+      <strong style="color:#fff;">Sviluppatore:</strong> Andrea Marrano — Cybersecurity Consulting<br>
+      P.IVA: 04361120613 &nbsp;·&nbsp; Email: <a href="mailto:andrea.marrano69@gmail.com">andrea.marrano69@gmail.com</a>
+    </p>
+  </div>
+
+  <div class="alert-warning">
+    <p><strong>⚠ Leggere attentamente prima di installare o utilizzare il Software.</strong><br>
+    Installando, copiando o utilizzando il Software, l'Utente accetta integralmente i termini del presente contratto. In caso di mancata accettazione, non installare né utilizzare il Software.</p>
+  </div>
+
+  <h2>Art. 1 — Definizioni</h2>
+  <ol>
+    <li><strong>"Software"</strong> indica il programma Rete Network Controller, inclusi tutti i moduli, aggiornamenti, documentazione e file correlati.</li>
+    <li><strong>"Licenza"</strong> indica il diritto d'uso personale e non esclusivo concesso all'Utente.</li>
+    <li><strong>"Hardware Fingerprint"</strong> indica il codice univoco generato dall'hardware del PC dell'Utente, utilizzato per vincolare la Licenza al dispositivo.</li>
+    <li><strong>"Dati di Rete"</strong> indica gli indirizzi IP, indirizzi MAC, hostname, porte aperte e qualsiasi altra informazione raccolta durante le scansioni.</li>
+  </ol>
+
+  <h2>Art. 2 — Concessione di Licenza</h2>
+  <ol>
+    <li>Il Licenziante concede all'Utente una licenza <strong>personale, non trasferibile, non esclusiva</strong> e non sub-licenziabile per installare e utilizzare il Software sul numero di PC previsto dal piano acquistato.</li>
+    <li>La licenza è strettamente personale: non è cedibile, vendibile o trasferibile a terzi senza consenso scritto del Licenziante.</li>
+    <li>Il periodo di prova gratuito ("Trial") di <strong>7 giorni</strong> consente l'accesso a tutte le funzioni. Al termine, senza attivazione, alcune funzioni avanzate vengono disabilitate.</li>
+  </ol>
+
+  <h2>Art. 3 — Restrizioni</h2>
+  <p>L'Utente non può, direttamente o indirettamente:</p>
+  <ul class="restriction-list">
+    <li>Copiare, distribuire, rivendere o cedere il Software o la Licenza a terzi</li>
+    <li>Decompilare, disassemblare o effettuare reverse engineering del Software</li>
+    <li>Rimuovere, alterare o oscurare qualsiasi indicazione di copyright o protezione della licenza</li>
+    <li>Utilizzare il Software per scansionare reti non di propria pertinenza senza autorizzazione scritta</li>
+    <li>Utilizzare il Software per attività illegali, fraudolente o che violino diritti di terzi</li>
+    <li>Creare opere derivate basate sul Software</li>
+    <li>Affittare, noleggiare o concedere in sublicenza il Software</li>
+  </ul>
+
+  <h2>Art. 4 — Responsabilità dell'Utente e Conformità Legale</h2>
+  <ol>
+    <li>L'Utente è l'unico responsabile dell'uso del Software in conformità con il GDPR (Reg. UE 2016/679), il D.Lgs. 196/2003 e le normative settoriali applicabili.</li>
+    <li>L'Utente si impegna a utilizzare il Software esclusivamente su reti e sistemi di propria pertinenza o per i quali disponga di esplicita autorizzazione scritta.</li>
+    <li>Il Software elabora Dati di Rete esclusivamente in locale. Il Licenziante non riceve né archivia dati di scansione.</li>
+    <li>L'utilizzo di HIBP comporta la trasmissione di dati parzialmente anonimizzati. L'utilizzo dell'AI Assistant comporta la trasmissione di testo all'API di Anthropic Inc. (USA). L'Utente è responsabile della conformità GDPR di tali trasferimenti.</li>
+    <li>Il Licenziante non è responsabile per l'uso improprio del Software o per danni derivanti da scansioni non autorizzate.</li>
+  </ol>
+
+  <h2>Art. 5 — Aggiornamenti e Supporto</h2>
+  <ol>
+    <li>Il Licenziante può rilasciare aggiornamenti del Software a propria discrezione. Gli aggiornamenti sono soggetti ai termini del presente EULA.</li>
+    <li>Versioni contrassegnate come "min_required" richiedono aggiornamento obbligatorio, notificato con almeno 30 giorni di anticipo salvo emergenze di sicurezza.</li>
+    <li>Il supporto tecnico è fornito via email entro 5 giorni lavorativi.</li>
+  </ol>
+
+  <h2>Art. 6 — Proprietà Intellettuale</h2>
+  <ol>
+    <li>Il Software è e rimane proprietà esclusiva del Licenziante. Il presente EULA non trasferisce alcun diritto di proprietà intellettuale all'Utente.</li>
+    <li>Tutti i diritti non espressamente concessi sono riservati al Licenziante.</li>
+  </ol>
+
+  <h2>Art. 7 — Garanzie e Limitazione di Responsabilità</h2>
+  <div class="caps">
+    IL SOFTWARE VIENE FORNITO "COSÌ COM'È" (AS IS), SENZA GARANZIE DI ALCUN TIPO, ESPLICITE O IMPLICITE. IL LICENZIANTE NON GARANTISCE CHE IL SOFTWARE SIA PRIVO DI ERRORI O CHE I RISULTATI DELLE SCANSIONI SIANO COMPLETI AL 100%.
+    IN NESSUN CASO IL LICENZIANTE SARÀ RESPONSABILE DI DANNI DIRETTI, INDIRETTI, INCIDENTALI O CONSEQUENZIALI DERIVANTI DALL'USO DEL SOFTWARE.
+    LA RESPONSABILITÀ MASSIMA DEL LICENZIANTE È LIMITATA AL CORRISPETTIVO PAGATO DALL'UTENTE NEI 12 MESI PRECEDENTI L'EVENTO.
+  </div>
+
+  <h2>Art. 8 — Terminazione</h2>
+  <ol>
+    <li>La Licenza è revocata automaticamente in caso di violazione di qualsiasi termine del presente EULA, senza necessità di preavviso.</li>
+    <li>Al momento della terminazione, l'Utente è tenuto a cessare ogni uso del Software e disinstallarlo.</li>
+    <li>Il Licenziante può terminare la Licenza con 30 giorni di preavviso scritto, rimborsando la quota proporzionale al periodo residuo se applicabile.</li>
+  </ol>
+
+  <h2>Art. 9 — Legge Applicabile e Foro Competente</h2>
+  <ol>
+    <li>Il presente EULA è regolato dalla legge italiana.</li>
+    <li>Le parti concordano di tentare una risoluzione amichevole prima di intraprendere azioni legali.</li>
+  </ol>
+
+  <h2>Art. 10 — Disposizioni Generali</h2>
+  <ol>
+    <li>Se una clausola del presente EULA risulta invalida, le restanti mantengono piena validità.</li>
+    <li>Il mancato esercizio di un diritto da parte del Licenziante non costituisce rinuncia a tale diritto.</li>
+    <li>Il presente EULA costituisce l'intero accordo tra le parti e sostituisce qualsiasi accordo precedente.</li>
+  </ol>
+
+  <p style="margin-top:40px; padding:16px; background:var(--bg3); border-radius:8px; font-size:0.82rem; color:var(--text2);">
+    <strong style="color:#fff;">Nota:</strong> Si raccomanda la revisione da parte di un professionista legale prima dell'uso commerciale.
+  </p>
+</main>
+
+<footer>
+  © 2025–2026 Andrea Marrano — Cybersecurity Consulting · P.IVA 04361120613 ·
+  <a href="index.html">Home</a> · <a href="privacy.html">Privacy Policy</a> · <a href="dpa.html">DPA</a>
+</footer>
+
+</body>
+</html>
